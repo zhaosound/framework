@@ -1,14 +1,20 @@
 <?php
 //定义常量
-define('SRC_PATH', __DIR__."/app");
+use core\Framework;
+define('ROOT', __DIR__);
+define('APP', __DIR__."/app");
+define('CORE', __DIR__."/core");
 define('APP_DEBUG', true);
 
 //composer自动加载
 require __DIR__.'/vendor/autoload.php';
 
-//自动加载
-//spl_autoload_register('');
-$testArr = [1,2,3,4,5,6];
-dump($testArr);
+//引入文件
+require CORE."/common/Common.php";
+require CORE."/Framework.php";
 
+//自动加载
+spl_autoload_register('core\Framework::load');
+
+Framework::run();
 

@@ -4,6 +4,7 @@ use core\Framework;
 define('ROOT', __DIR__);
 define('APP', __DIR__."/app");
 define('CORE', __DIR__."/core");
+define('MODULE', 'app');
 define('APP_DEBUG', true);
 
 //composer自动加载

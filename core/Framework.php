@@ -10,7 +10,6 @@ class Framework
         $controller = $route->controller;
         $action = $route->action;
         $file = APP.'/controller/'.$controller.'Controller.php';
-
         if (is_file($file)) {
             $class = '\\'.MODULE.'\\controller\\'.ucfirst($controller).'Controller';
             $instance = new $class();

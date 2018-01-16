@@ -18,4 +18,3 @@ require CORE."/Framework.php";
 spl_autoload_register('core\Framework::load');
 
 Framework::run();
-

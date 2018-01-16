@@ -2,7 +2,8 @@
   "name": "test framework",
   "description": "framework from scratch",
   "require": {
-    "twig/twig": "*"
+    "twig/twig": "*",
+    "catfan/medoo": "^1.5"
   },
   "require-dev": {
     "symfony/var-dumper": "*"

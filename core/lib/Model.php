@@ -3,19 +3,20 @@
 namespace core\lib;
 
 
-class Model extends \PDO
+use Medoo\Medoo;
+
+class Model extends \Medoo\Medoo
 {
     public function __construct()
     {
-        $dsn = 'mysql:host=localhost;dbname=framework';
-        $username = 'root';
-        $passwd = '930219';
-
-        try {
-            parent::__construct($dsn, $username, $passwd);
-            dump('ok');
-        } catch (\Exception $e) {
-            dump($e->getMessage());
-        }
+        $params = [
+            'database_type' => 'mysql',
+            'database_name' => 'framework',
+            'server' => 'localhost',
+            'username' => 'root',
+            'password' => '930219',
+            'charset' => 'utf8'
+        ];
+        parent::__construct($params);
     }
 }

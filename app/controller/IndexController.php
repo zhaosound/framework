@@ -9,15 +9,20 @@ class IndexController extends Framework
 {
     public function index()
     {
-        $model = new Model();
-        $sql = "select * from temp";
-        $res = $model->query($sql);
-        dump($res->fetchAll());
+        dump('index');
     }
 
     public function twig()
     {
         $this->assign('name', 'zhaoxiang');
         $this->display('index.html.twig');
+    }
+
+    public function medoo()
+    {
+        $model = new Model();
+        $res = $model->select('temp', '*');
+        dump($res);
+
     }
 }
